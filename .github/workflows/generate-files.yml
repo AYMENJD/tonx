@@ -22,11 +22,11 @@ jobs:
       - name: Generate TonX files
         run: |
           cd $GITHUB_WORKSPACE/tonx
-          mv types/ _types_
+          mv types/__init__.py types/mv__init__.py
           python -m pip install black
-          mv _types_/ types
           python generate_json.py
           python generate_files.py
+          mv types/mv__init__.py types/__init__.py
 
       - name: Commit Tonlib files
         uses: EndBug/add-and-commit@v9
