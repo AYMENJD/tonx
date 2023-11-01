@@ -9,6 +9,8 @@ TonX is an asynchronous [**Tonlib**](https://github.com/ton-blockchain/ton) wrap
 
 
 ### Requirements
+> NOTE: [TonX](https://github.com/AYMENJD/tonx) will automatically attempt to download the correct pre-built binary of tonlibjson from  [**Tonlib Releases**](https://github.com/ton-blockchain/ton/releases)
+
 - Python 3.9+
 
 ### Installation
