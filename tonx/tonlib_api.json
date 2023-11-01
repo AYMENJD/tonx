@@ -1,0 +1,2924 @@
+{
+    "name": "Auto-generated JSON TonLib API for PyTonJSON ~ https://github.com/pytdbot/client",
+    "classes": {
+        "Error": {
+            "types": [
+                "error"
+            ],
+            "functions": []
+        },
+        "Ok": {
+            "types": [
+                "ok"
+            ],
+            "functions": [
+                "close",
+                "deleteKey",
+                "deleteAllKeys",
+                "raw.sendMessage",
+                "raw.createAndSendMessage",
+                "query.send",
+                "query.forget",
+                "smc.forget",
+                "pchan.validatePromise",
+                "onLiteServerQueryResult",
+                "onLiteServerQueryError",
+                "runTests",
+                "setLogStream",
+                "setLogVerbosityLevel",
+                "setLogTagVerbosityLevel",
+                "addLogMessage"
+            ]
+        },
+        "KeyStoreType": {
+            "types": [
+                "keyStoreTypeDirectory",
+                "keyStoreTypeInMemory"
+            ],
+            "functions": []
+        },
+        "Config": {
+            "types": [
+                "config"
+            ],
+            "functions": []
+        },
+        "Options": {
+            "types": [
+                "options"
+            ],
+            "functions": []
+        },
+        "options.ConfigInfo": {
+            "types": [
+                "options.configInfo"
+            ],
+            "functions": [
+                "options.setConfig",
+                "options.validateConfig"
+            ]
+        },
+        "options.Info": {
+            "types": [
+                "options.info"
+            ],
+            "functions": [
+                "init"
+            ]
+        },
+        "Key": {
+            "types": [
+                "key"
+            ],
+            "functions": [
+                "createNewKey",
+                "importKey",
+                "importPemKey",
+                "importEncryptedKey",
+                "importUnencryptedKey",
+                "changeLocalPassword"
+            ]
+        },
+        "InputKey": {
+            "types": [
+                "inputKeyRegular",
+                "inputKeyFake"
+            ],
+            "functions": []
+        },
+        "ExportedKey": {
+            "types": [
+                "exportedKey"
+            ],
+            "functions": [
+                "exportKey"
+            ]
+        },
+        "ExportedPemKey": {
+            "types": [
+                "exportedPemKey"
+            ],
+            "functions": [
+                "exportPemKey"
+            ]
+        },
+        "ExportedEncryptedKey": {
+            "types": [
+                "exportedEncryptedKey"
+            ],
+            "functions": [
+                "exportEncryptedKey"
+            ]
+        },
+        "ExportedUnencryptedKey": {
+            "types": [
+                "exportedUnencryptedKey"
+            ],
+            "functions": [
+                "exportUnencryptedKey"
+            ]
+        },
+        "Bip39Hints": {
+            "types": [
+                "bip39Hints"
+            ],
+            "functions": [
+                "getBip39Hints"
+            ]
+        },
+        "AdnlAddress": {
+            "types": [
+                "adnlAddress"
+            ],
+            "functions": []
+        },
+        "AccountAddress": {
+            "types": [
+                "accountAddress"
+            ],
+            "functions": [
+                "packAccountAddress",
+                "getAccountAddress"
+            ]
+        },
+        "UnpackedAccountAddress": {
+            "types": [
+                "unpackedAccountAddress"
+            ],
+            "functions": [
+                "unpackAccountAddress"
+            ]
+        },
+        "internal.TransactionId": {
+            "types": [
+                "internal.transactionId"
+            ],
+            "functions": []
+        },
+        "internal.BlockId": {
+            "types": [
+                "ton.blockId"
+            ],
+            "functions": []
+        },
+        "ton.BlockIdExt": {
+            "types": [
+                "ton.blockIdExt"
+            ],
+            "functions": [
+                "sync",
+                "blocks.lookupBlock"
+            ]
+        },
+        "raw.FullAccountState": {
+            "types": [
+                "raw.fullAccountState"
+            ],
+            "functions": [
+                "raw.getAccountState",
+                "raw.getAccountStateByTransaction"
+            ]
+        },
+        "raw.Message": {
+            "types": [
+                "raw.message"
+            ],
+            "functions": []
+        },
+        "raw.Transaction": {
+            "types": [
+                "raw.transaction"
+            ],
+            "functions": []
+        },
+        "raw.Transactions": {
+            "types": [
+                "raw.transactions"
+            ],
+            "functions": [
+                "raw.getTransactions",
+                "raw.getTransactionsV2"
+            ]
+        },
+        "raw.ExtMessageInfo": {
+            "types": [
+                "raw.extMessageInfo"
+            ],
+            "functions": [
+                "raw.sendMessageReturnHash"
+            ]
+        },
+        "pchan.Config": {
+            "types": [
+                "pchan.config"
+            ],
+            "functions": []
+        },
+        "InitialAccountState": {
+            "types": [
+                "raw.initialAccountState",
+                "wallet.v3.initialAccountState",
+                "wallet.highload.v1.initialAccountState",
+                "wallet.highload.v2.initialAccountState",
+                "rwallet.initialAccountState",
+                "dns.initialAccountState",
+                "pchan.initialAccountState"
+            ],
+            "functions": []
+        },
+        "rwallet.Limit": {
+            "types": [
+                "rwallet.limit"
+            ],
+            "functions": []
+        },
+        "rwallet.Config": {
+            "types": [
+                "rwallet.config"
+            ],
+            "functions": []
+        },
+        "AccountState": {
+            "types": [
+                "raw.accountState",
+                "wallet.v3.accountState",
+                "wallet.highload.v1.accountState",
+                "wallet.highload.v2.accountState",
+                "dns.accountState",
+                "rwallet.accountState",
+                "pchan.accountState",
+                "uninited.accountState"
+            ],
+            "functions": []
+        },
+        "pchan.State": {
+            "types": [
+                "pchan.stateInit",
+                "pchan.stateClose",
+                "pchan.statePayout"
+            ],
+            "functions": []
+        },
+        "FullAccountState": {
+            "types": [
+                "fullAccountState"
+            ],
+            "functions": [
+                "getAccountState",
+                "getAccountStateByTransaction"
+            ]
+        },
+        "AccountRevisionList": {
+            "types": [
+                "accountRevisionList"
+            ],
+            "functions": [
+                "guessAccountRevision",
+                "guessAccount"
+            ]
+        },
+        "AccountList": {
+            "types": [
+                "accountList"
+            ],
+            "functions": []
+        },
+        "SyncState": {
+            "types": [
+                "syncStateDone",
+                "syncStateInProgress"
+            ],
+            "functions": []
+        },
+        "msg.Data": {
+            "types": [
+                "msg.dataRaw",
+                "msg.dataText",
+                "msg.dataDecryptedText",
+                "msg.dataEncryptedText"
+            ],
+            "functions": [
+                "msg.decryptWithProof"
+            ]
+        },
+        "msg.DataEncrypted": {
+            "types": [
+                "msg.dataEncrypted"
+            ],
+            "functions": []
+        },
+        "msg.DataDecrypted": {
+            "types": [
+                "msg.dataDecrypted"
+            ],
+            "functions": []
+        },
+        "msg.DataEncryptedArray": {
+            "types": [
+                "msg.dataEncryptedArray"
+            ],
+            "functions": []
+        },
+        "msg.DataDecryptedArray": {
+            "types": [
+                "msg.dataDecryptedArray"
+            ],
+            "functions": [
+                "msg.decrypt"
+            ]
+        },
+        "msg.Message": {
+            "types": [
+                "msg.message"
+            ],
+            "functions": []
+        },
+        "dns.EntryData": {
+            "types": [
+                "dns.entryDataUnknown",
+                "dns.entryDataText",
+                "dns.entryDataNextResolver",
+                "dns.entryDataSmcAddress",
+                "dns.entryDataAdnlAddress",
+                "dns.entryDataStorageAddress"
+            ],
+            "functions": []
+        },
+        "dns.Entry": {
+            "types": [
+                "dns.entry"
+            ],
+            "functions": []
+        },
+        "dns.Action": {
+            "types": [
+                "dns.actionDeleteAll",
+                "dns.actionDelete",
+                "dns.actionSet"
+            ],
+            "functions": []
+        },
+        "dns.Resolved": {
+            "types": [
+                "dns.resolved"
+            ],
+            "functions": [
+                "dns.resolve"
+            ]
+        },
+        "pchan.Promise": {
+            "types": [
+                "pchan.promise"
+            ],
+            "functions": [
+                "pchan.signPromise",
+                "pchan.unpackPromise"
+            ]
+        },
+        "pchan.Action": {
+            "types": [
+                "pchan.actionInit",
+                "pchan.actionClose",
+                "pchan.actionTimeout"
+            ],
+            "functions": []
+        },
+        "rwallet.Action": {
+            "types": [
+                "rwallet.actionInit"
+            ],
+            "functions": []
+        },
+        "Action": {
+            "types": [
+                "actionNoop",
+                "actionMsg",
+                "actionDns",
+                "actionPchan",
+                "actionRwallet"
+            ],
+            "functions": []
+        },
+        "Fees": {
+            "types": [
+                "fees"
+            ],
+            "functions": []
+        },
+        "query.Fees": {
+            "types": [
+                "query.fees"
+            ],
+            "functions": [
+                "query.estimateFees"
+            ]
+        },
+        "query.Info": {
+            "types": [
+                "query.info"
+            ],
+            "functions": [
+                "raw.createQuery",
+                "createQuery",
+                "query.getInfo"
+            ]
+        },
+        "tvm.Slice": {
+            "types": [
+                "tvm.slice"
+            ],
+            "functions": []
+        },
+        "tvm.Cell": {
+            "types": [
+                "tvm.cell"
+            ],
+            "functions": [
+                "getShardAccountCell",
+                "getShardAccountCellByTransaction",
+                "smc.getCode",
+                "smc.getData",
+                "smc.getState"
+            ]
+        },
+        "tvm.Number": {
+            "types": [
+                "tvm.numberDecimal"
+            ],
+            "functions": []
+        },
+        "tvm.Tuple": {
+            "types": [
+                "tvm.tuple"
+            ],
+            "functions": []
+        },
+        "tvm.List": {
+            "types": [
+                "tvm.list"
+            ],
+            "functions": []
+        },
+        "tvm.StackEntry": {
+            "types": [
+                "tvm.stackEntrySlice",
+                "tvm.stackEntryCell",
+                "tvm.stackEntryNumber",
+                "tvm.stackEntryTuple",
+                "tvm.stackEntryList",
+                "tvm.stackEntryUnsupported"
+            ],
+            "functions": []
+        },
+        "smc.Info": {
+            "types": [
+                "smc.info"
+            ],
+            "functions": [
+                "smc.load",
+                "smc.loadByTransaction"
+            ]
+        },
+        "smc.MethodId": {
+            "types": [
+                "smc.methodIdNumber",
+                "smc.methodIdName"
+            ],
+            "functions": []
+        },
+        "smc.RunResult": {
+            "types": [
+                "smc.runResult"
+            ],
+            "functions": [
+                "smc.runGetMethod"
+            ]
+        },
+        "smc.LibraryEntry": {
+            "types": [
+                "smc.libraryEntry"
+            ],
+            "functions": []
+        },
+        "smc.LibraryResult": {
+            "types": [
+                "smc.libraryResult"
+            ],
+            "functions": [
+                "smc.getLibraries"
+            ]
+        },
+        "Update": {
+            "types": [
+                "updateSendLiteServerQuery",
+                "updateSyncState"
+            ],
+            "functions": []
+        },
+        "LogStream": {
+            "types": [
+                "logStreamDefault",
+                "logStreamFile",
+                "logStreamEmpty"
+            ],
+            "functions": [
+                "getLogStream"
+            ]
+        },
+        "LogVerbosityLevel": {
+            "types": [
+                "logVerbosityLevel"
+            ],
+            "functions": [
+                "getLogVerbosityLevel",
+                "getLogTagVerbosityLevel"
+            ]
+        },
+        "LogTags": {
+            "types": [
+                "logTags"
+            ],
+            "functions": [
+                "getLogTags"
+            ]
+        },
+        "Data": {
+            "types": [
+                "data"
+            ],
+            "functions": [
+                "encrypt",
+                "decrypt",
+                "kdf",
+                "pchan.packPromise"
+            ]
+        },
+        "liteServer.Info": {
+            "types": [
+                "liteServer.info"
+            ],
+            "functions": [
+                "liteServer.getInfo"
+            ]
+        },
+        "blocks.MasterchainInfo": {
+            "types": [
+                "blocks.masterchainInfo"
+            ],
+            "functions": [
+                "blocks.getMasterchainInfo"
+            ]
+        },
+        "blocks.Shards": {
+            "types": [
+                "blocks.shards"
+            ],
+            "functions": [
+                "blocks.getShards"
+            ]
+        },
+        "blocks.AccountTransactionId": {
+            "types": [
+                "blocks.accountTransactionId"
+            ],
+            "functions": []
+        },
+        "liteServer.TransactionId": {
+            "types": [
+                "blocks.shortTxId"
+            ],
+            "functions": []
+        },
+        "blocks.Transactions": {
+            "types": [
+                "blocks.transactions"
+            ],
+            "functions": [
+                "blocks.getTransactions"
+            ]
+        },
+        "blocks.TransactionsExt": {
+            "types": [
+                "blocks.transactionsExt"
+            ],
+            "functions": [
+                "blocks.getTransactionsExt"
+            ]
+        },
+        "blocks.Header": {
+            "types": [
+                "blocks.header"
+            ],
+            "functions": [
+                "blocks.getBlockHeader"
+            ]
+        },
+        "blocks.Signature": {
+            "types": [
+                "blocks.signature"
+            ],
+            "functions": []
+        },
+        "blocks.BlockSignatures": {
+            "types": [
+                "blocks.blockSignatures"
+            ],
+            "functions": [
+                "blocks.getMasterchainBlockSignatures"
+            ]
+        },
+        "blocks.ShardBlockLink": {
+            "types": [
+                "blocks.shardBlockLink"
+            ],
+            "functions": []
+        },
+        "blocks.BlockLinkBack": {
+            "types": [
+                "blocks.blockLinkBack"
+            ],
+            "functions": []
+        },
+        "blocks.ShardBlockProof": {
+            "types": [
+                "blocks.shardBlockProof"
+            ],
+            "functions": [
+                "blocks.getShardBlockProof"
+            ]
+        },
+        "ConfigInfo": {
+            "types": [
+                "configInfo"
+            ],
+            "functions": [
+                "getConfigParam",
+                "getConfigAll"
+            ]
+        },
+        "Object": {
+            "types": [],
+            "functions": [
+                "withBlock"
+            ]
+        }
+    },
+    "types": {
+        "error": {
+            "args": {
+                "code": {
+                    "type": "int32"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "result_type": "Error"
+        },
+        "ok": {
+            "args": {},
+            "result_type": "Ok"
+        },
+        "keyStoreTypeDirectory": {
+            "args": {
+                "directory": {
+                    "type": "string"
+                }
+            },
+            "result_type": "KeyStoreType"
+        },
+        "keyStoreTypeInMemory": {
+            "args": {},
+            "result_type": "KeyStoreType"
+        },
+        "config": {
+            "args": {
+                "config": {
+                    "type": "string"
+                },
+                "blockchain_name": {
+                    "type": "string"
+                },
+                "use_callbacks_for_network": {
+                    "type": "Bool"
+                },
+                "ignore_cache": {
+                    "type": "Bool"
+                }
+            },
+            "result_type": "Config"
+        },
+        "options": {
+            "args": {
+                "config": {
+                    "type": "config"
+                },
+                "keystore_type": {
+                    "type": "KeyStoreType"
+                }
+            },
+            "result_type": "Options"
+        },
+        "options.configInfo": {
+            "args": {
+                "default_wallet_id": {
+                    "type": "int64"
+                },
+                "default_rwallet_init_public_key": {
+                    "type": "string"
+                }
+            },
+            "result_type": "options.ConfigInfo"
+        },
+        "options.info": {
+            "args": {
+                "config_info": {
+                    "type": "options.configInfo"
+                }
+            },
+            "result_type": "options.Info"
+        },
+        "key": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "secret": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Key"
+        },
+        "inputKeyRegular": {
+            "args": {
+                "key": {
+                    "type": "key"
+                },
+                "local_password": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "InputKey"
+        },
+        "inputKeyFake": {
+            "args": {},
+            "result_type": "InputKey"
+        },
+        "exportedKey": {
+            "args": {
+                "word_list": {
+                    "type": "vector<secureString>"
+                }
+            },
+            "result_type": "ExportedKey"
+        },
+        "exportedPemKey": {
+            "args": {
+                "pem": {
+                    "type": "secureString"
+                }
+            },
+            "result_type": "ExportedPemKey"
+        },
+        "exportedEncryptedKey": {
+            "args": {
+                "data": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "ExportedEncryptedKey"
+        },
+        "exportedUnencryptedKey": {
+            "args": {
+                "data": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "ExportedUnencryptedKey"
+        },
+        "bip39Hints": {
+            "args": {
+                "words": {
+                    "type": "vector<string>"
+                }
+            },
+            "result_type": "Bip39Hints"
+        },
+        "adnlAddress": {
+            "args": {
+                "adnl_address": {
+                    "type": "string"
+                }
+            },
+            "result_type": "AdnlAddress"
+        },
+        "accountAddress": {
+            "args": {
+                "account_address": {
+                    "type": "string"
+                }
+            },
+            "result_type": "AccountAddress"
+        },
+        "unpackedAccountAddress": {
+            "args": {
+                "workchain_id": {
+                    "type": "int32"
+                },
+                "bounceable": {
+                    "type": "Bool"
+                },
+                "testnet": {
+                    "type": "Bool"
+                },
+                "addr": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "UnpackedAccountAddress"
+        },
+        "internal.transactionId": {
+            "args": {
+                "lt": {
+                    "type": "int64"
+                },
+                "hash": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "internal.TransactionId"
+        },
+        "ton.blockId": {
+            "args": {
+                "workchain": {
+                    "type": "int32"
+                },
+                "shard": {
+                    "type": "int64"
+                },
+                "seqno": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "internal.BlockId"
+        },
+        "ton.blockIdExt": {
+            "args": {
+                "workchain": {
+                    "type": "int32"
+                },
+                "shard": {
+                    "type": "int64"
+                },
+                "seqno": {
+                    "type": "int32"
+                },
+                "root_hash": {
+                    "type": "bytes"
+                },
+                "file_hash": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "ton.BlockIdExt"
+        },
+        "raw.fullAccountState": {
+            "args": {
+                "balance": {
+                    "type": "int64"
+                },
+                "code": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "bytes"
+                },
+                "last_transaction_id": {
+                    "type": "internal.transactionId"
+                },
+                "block_id": {
+                    "type": "ton.blockIdExt"
+                },
+                "frozen_hash": {
+                    "type": "bytes"
+                },
+                "sync_utime": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "raw.FullAccountState"
+        },
+        "raw.message": {
+            "args": {
+                "source": {
+                    "type": "accountAddress"
+                },
+                "destination": {
+                    "type": "accountAddress"
+                },
+                "value": {
+                    "type": "int64"
+                },
+                "fwd_fee": {
+                    "type": "int64"
+                },
+                "ihr_fee": {
+                    "type": "int64"
+                },
+                "created_lt": {
+                    "type": "int64"
+                },
+                "body_hash": {
+                    "type": "bytes"
+                },
+                "msg_data": {
+                    "type": "msg.Data"
+                }
+            },
+            "result_type": "raw.Message"
+        },
+        "raw.transaction": {
+            "args": {
+                "address": {
+                    "type": "accountAddress"
+                },
+                "utime": {
+                    "type": "int53"
+                },
+                "data": {
+                    "type": "bytes"
+                },
+                "transaction_id": {
+                    "type": "internal.transactionId"
+                },
+                "fee": {
+                    "type": "int64"
+                },
+                "storage_fee": {
+                    "type": "int64"
+                },
+                "other_fee": {
+                    "type": "int64"
+                },
+                "in_msg": {
+                    "type": "raw.message"
+                },
+                "out_msgs": {
+                    "type": "vector<raw.message>"
+                }
+            },
+            "result_type": "raw.Transaction"
+        },
+        "raw.transactions": {
+            "args": {
+                "transactions": {
+                    "type": "vector<raw.transaction>"
+                },
+                "previous_transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "raw.Transactions"
+        },
+        "raw.extMessageInfo": {
+            "args": {
+                "hash": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "raw.ExtMessageInfo"
+        },
+        "pchan.config": {
+            "args": {
+                "alice_public_key": {
+                    "type": "string"
+                },
+                "alice_address": {
+                    "type": "accountAddress"
+                },
+                "bob_public_key": {
+                    "type": "string"
+                },
+                "bob_address": {
+                    "type": "accountAddress"
+                },
+                "init_timeout": {
+                    "type": "int32"
+                },
+                "close_timeout": {
+                    "type": "int32"
+                },
+                "channel_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.Config"
+        },
+        "raw.initialAccountState": {
+            "args": {
+                "code": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "wallet.v3.initialAccountState": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "wallet.highload.v1.initialAccountState": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "wallet.highload.v2.initialAccountState": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "rwallet.limit": {
+            "args": {
+                "seconds": {
+                    "type": "int32"
+                },
+                "value": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "rwallet.Limit"
+        },
+        "rwallet.config": {
+            "args": {
+                "start_at": {
+                    "type": "int53"
+                },
+                "limits": {
+                    "type": "vector<rwallet.limit>"
+                }
+            },
+            "result_type": "rwallet.Config"
+        },
+        "rwallet.initialAccountState": {
+            "args": {
+                "init_public_key": {
+                    "type": "string"
+                },
+                "public_key": {
+                    "type": "string"
+                },
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "dns.initialAccountState": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "pchan.initialAccountState": {
+            "args": {
+                "config": {
+                    "type": "pchan.config"
+                }
+            },
+            "result_type": "InitialAccountState"
+        },
+        "raw.accountState": {
+            "args": {
+                "code": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "bytes"
+                },
+                "frozen_hash": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "wallet.v3.accountState": {
+            "args": {
+                "wallet_id": {
+                    "type": "int64"
+                },
+                "seqno": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "wallet.highload.v1.accountState": {
+            "args": {
+                "wallet_id": {
+                    "type": "int64"
+                },
+                "seqno": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "wallet.highload.v2.accountState": {
+            "args": {
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "dns.accountState": {
+            "args": {
+                "wallet_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "rwallet.accountState": {
+            "args": {
+                "wallet_id": {
+                    "type": "int64"
+                },
+                "seqno": {
+                    "type": "int32"
+                },
+                "unlocked_balance": {
+                    "type": "int64"
+                },
+                "config": {
+                    "type": "rwallet.config"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "pchan.stateInit": {
+            "args": {
+                "signed_A": {
+                    "type": "Bool"
+                },
+                "signed_B": {
+                    "type": "Bool"
+                },
+                "min_A": {
+                    "type": "int64"
+                },
+                "min_B": {
+                    "type": "int64"
+                },
+                "expire_at": {
+                    "type": "int53"
+                },
+                "A": {
+                    "type": "int64"
+                },
+                "B": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.State"
+        },
+        "pchan.stateClose": {
+            "args": {
+                "signed_A": {
+                    "type": "Bool"
+                },
+                "signed_B": {
+                    "type": "Bool"
+                },
+                "min_A": {
+                    "type": "int64"
+                },
+                "min_B": {
+                    "type": "int64"
+                },
+                "expire_at": {
+                    "type": "int53"
+                },
+                "A": {
+                    "type": "int64"
+                },
+                "B": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.State"
+        },
+        "pchan.statePayout": {
+            "args": {
+                "A": {
+                    "type": "int64"
+                },
+                "B": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.State"
+        },
+        "pchan.accountState": {
+            "args": {
+                "config": {
+                    "type": "pchan.config"
+                },
+                "state": {
+                    "type": "pchan.State"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "uninited.accountState": {
+            "args": {
+                "frozen_hash": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "AccountState"
+        },
+        "fullAccountState": {
+            "args": {
+                "address": {
+                    "type": "accountAddress"
+                },
+                "balance": {
+                    "type": "int64"
+                },
+                "last_transaction_id": {
+                    "type": "internal.transactionId"
+                },
+                "block_id": {
+                    "type": "ton.blockIdExt"
+                },
+                "sync_utime": {
+                    "type": "int53"
+                },
+                "account_state": {
+                    "type": "AccountState"
+                },
+                "revision": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "FullAccountState"
+        },
+        "accountRevisionList": {
+            "args": {
+                "revisions": {
+                    "type": "vector<fullAccountState>"
+                }
+            },
+            "result_type": "AccountRevisionList"
+        },
+        "accountList": {
+            "args": {
+                "accounts": {
+                    "type": "vector<fullAccountState>"
+                }
+            },
+            "result_type": "AccountList"
+        },
+        "syncStateDone": {
+            "args": {},
+            "result_type": "SyncState"
+        },
+        "syncStateInProgress": {
+            "args": {
+                "from_seqno": {
+                    "type": "int32"
+                },
+                "to_seqno": {
+                    "type": "int32"
+                },
+                "current_seqno": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "SyncState"
+        },
+        "msg.dataRaw": {
+            "args": {
+                "body": {
+                    "type": "bytes"
+                },
+                "init_state": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "msg.Data"
+        },
+        "msg.dataText": {
+            "args": {
+                "text": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "msg.Data"
+        },
+        "msg.dataDecryptedText": {
+            "args": {
+                "text": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "msg.Data"
+        },
+        "msg.dataEncryptedText": {
+            "args": {
+                "text": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "msg.Data"
+        },
+        "msg.dataEncrypted": {
+            "args": {
+                "source": {
+                    "type": "accountAddress"
+                },
+                "data": {
+                    "type": "msg.Data"
+                }
+            },
+            "result_type": "msg.DataEncrypted"
+        },
+        "msg.dataDecrypted": {
+            "args": {
+                "proof": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "msg.Data"
+                }
+            },
+            "result_type": "msg.DataDecrypted"
+        },
+        "msg.dataEncryptedArray": {
+            "args": {
+                "elements": {
+                    "type": "vector<msg.dataEncrypted>"
+                }
+            },
+            "result_type": "msg.DataEncryptedArray"
+        },
+        "msg.dataDecryptedArray": {
+            "args": {
+                "elements": {
+                    "type": "vector<msg.dataDecrypted>"
+                }
+            },
+            "result_type": "msg.DataDecryptedArray"
+        },
+        "msg.message": {
+            "args": {
+                "destination": {
+                    "type": "accountAddress"
+                },
+                "public_key": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "int64"
+                },
+                "data": {
+                    "type": "msg.Data"
+                },
+                "send_mode": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "msg.Message"
+        },
+        "dns.entryDataUnknown": {
+            "args": {
+                "bytes": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entryDataText": {
+            "args": {
+                "text": {
+                    "type": "string"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entryDataNextResolver": {
+            "args": {
+                "resolver": {
+                    "type": "AccountAddress"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entryDataSmcAddress": {
+            "args": {
+                "smc_address": {
+                    "type": "AccountAddress"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entryDataAdnlAddress": {
+            "args": {
+                "adnl_address": {
+                    "type": "AdnlAddress"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entryDataStorageAddress": {
+            "args": {
+                "bag_id": {
+                    "type": "int256"
+                }
+            },
+            "result_type": "dns.EntryData"
+        },
+        "dns.entry": {
+            "args": {
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "int256"
+                },
+                "entry": {
+                    "type": "dns.EntryData"
+                }
+            },
+            "result_type": "dns.Entry"
+        },
+        "dns.actionDeleteAll": {
+            "args": {},
+            "result_type": "dns.Action"
+        },
+        "dns.actionDelete": {
+            "args": {
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "int256"
+                }
+            },
+            "result_type": "dns.Action"
+        },
+        "dns.actionSet": {
+            "args": {
+                "entry": {
+                    "type": "dns.entry"
+                }
+            },
+            "result_type": "dns.Action"
+        },
+        "dns.resolved": {
+            "args": {
+                "entries": {
+                    "type": "vector<dns.entry>"
+                }
+            },
+            "result_type": "dns.Resolved"
+        },
+        "pchan.promise": {
+            "args": {
+                "signature": {
+                    "type": "bytes"
+                },
+                "promise_A": {
+                    "type": "int64"
+                },
+                "promise_B": {
+                    "type": "int64"
+                },
+                "channel_id": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.Promise"
+        },
+        "pchan.actionInit": {
+            "args": {
+                "inc_A": {
+                    "type": "int64"
+                },
+                "inc_B": {
+                    "type": "int64"
+                },
+                "min_A": {
+                    "type": "int64"
+                },
+                "min_B": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "pchan.Action"
+        },
+        "pchan.actionClose": {
+            "args": {
+                "extra_A": {
+                    "type": "int64"
+                },
+                "extra_B": {
+                    "type": "int64"
+                },
+                "promise": {
+                    "type": "pchan.promise"
+                }
+            },
+            "result_type": "pchan.Action"
+        },
+        "pchan.actionTimeout": {
+            "args": {},
+            "result_type": "pchan.Action"
+        },
+        "rwallet.actionInit": {
+            "args": {
+                "config": {
+                    "type": "rwallet.config"
+                }
+            },
+            "result_type": "rwallet.Action"
+        },
+        "actionNoop": {
+            "args": {},
+            "result_type": "Action"
+        },
+        "actionMsg": {
+            "args": {
+                "messages": {
+                    "type": "vector<msg.message>"
+                },
+                "allow_send_to_uninited": {
+                    "type": "Bool"
+                }
+            },
+            "result_type": "Action"
+        },
+        "actionDns": {
+            "args": {
+                "actions": {
+                    "type": "vector<dns.Action>"
+                }
+            },
+            "result_type": "Action"
+        },
+        "actionPchan": {
+            "args": {
+                "action": {
+                    "type": "pchan.Action"
+                }
+            },
+            "result_type": "Action"
+        },
+        "actionRwallet": {
+            "args": {
+                "action": {
+                    "type": "rwallet.actionInit"
+                }
+            },
+            "result_type": "Action"
+        },
+        "fees": {
+            "args": {
+                "in_fwd_fee": {
+                    "type": "int53"
+                },
+                "storage_fee": {
+                    "type": "int53"
+                },
+                "gas_fee": {
+                    "type": "int53"
+                },
+                "fwd_fee": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "Fees"
+        },
+        "query.fees": {
+            "args": {
+                "source_fees": {
+                    "type": "fees"
+                },
+                "destination_fees": {
+                    "type": "vector<fees>"
+                }
+            },
+            "result_type": "query.Fees"
+        },
+        "query.info": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                },
+                "valid_until": {
+                    "type": "int53"
+                },
+                "body_hash": {
+                    "type": "bytes"
+                },
+                "body": {
+                    "type": "bytes"
+                },
+                "init_state": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "query.Info"
+        },
+        "tvm.slice": {
+            "args": {
+                "bytes": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "tvm.Slice"
+        },
+        "tvm.cell": {
+            "args": {
+                "bytes": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "tvm.numberDecimal": {
+            "args": {
+                "number": {
+                    "type": "string"
+                }
+            },
+            "result_type": "tvm.Number"
+        },
+        "tvm.tuple": {
+            "args": {
+                "elements": {
+                    "type": "vector<tvm.StackEntry>"
+                }
+            },
+            "result_type": "tvm.Tuple"
+        },
+        "tvm.list": {
+            "args": {
+                "elements": {
+                    "type": "vector<tvm.StackEntry>"
+                }
+            },
+            "result_type": "tvm.List"
+        },
+        "tvm.stackEntrySlice": {
+            "args": {
+                "slice": {
+                    "type": "tvm.slice"
+                }
+            },
+            "result_type": "tvm.StackEntry"
+        },
+        "tvm.stackEntryCell": {
+            "args": {
+                "cell": {
+                    "type": "tvm.cell"
+                }
+            },
+            "result_type": "tvm.StackEntry"
+        },
+        "tvm.stackEntryNumber": {
+            "args": {
+                "number": {
+                    "type": "tvm.Number"
+                }
+            },
+            "result_type": "tvm.StackEntry"
+        },
+        "tvm.stackEntryTuple": {
+            "args": {
+                "tuple": {
+                    "type": "tvm.Tuple"
+                }
+            },
+            "result_type": "tvm.StackEntry"
+        },
+        "tvm.stackEntryList": {
+            "args": {
+                "list": {
+                    "type": "tvm.List"
+                }
+            },
+            "result_type": "tvm.StackEntry"
+        },
+        "tvm.stackEntryUnsupported": {
+            "args": {},
+            "result_type": "tvm.StackEntry"
+        },
+        "smc.info": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "smc.Info"
+        },
+        "smc.methodIdNumber": {
+            "args": {
+                "number": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "smc.MethodId"
+        },
+        "smc.methodIdName": {
+            "args": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "result_type": "smc.MethodId"
+        },
+        "smc.runResult": {
+            "args": {
+                "gas_used": {
+                    "type": "int53"
+                },
+                "stack": {
+                    "type": "vector<tvm.StackEntry>"
+                },
+                "exit_code": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "smc.RunResult"
+        },
+        "smc.libraryEntry": {
+            "args": {
+                "hash": {
+                    "type": "int256"
+                },
+                "data": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "smc.LibraryEntry"
+        },
+        "smc.libraryResult": {
+            "args": {
+                "result": {
+                    "type": "(vector smc.libraryEntry)"
+                }
+            },
+            "result_type": "smc.LibraryResult"
+        },
+        "updateSendLiteServerQuery": {
+            "args": {
+                "id": {
+                    "type": "int64"
+                },
+                "data": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "Update"
+        },
+        "updateSyncState": {
+            "args": {
+                "sync_state": {
+                    "type": "SyncState"
+                }
+            },
+            "result_type": "Update"
+        },
+        "logStreamDefault": {
+            "args": {},
+            "result_type": "LogStream"
+        },
+        "logStreamFile": {
+            "args": {
+                "path": {
+                    "type": "string"
+                },
+                "max_file_size": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "LogStream"
+        },
+        "logStreamEmpty": {
+            "args": {},
+            "result_type": "LogStream"
+        },
+        "logVerbosityLevel": {
+            "args": {
+                "verbosity_level": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "LogVerbosityLevel"
+        },
+        "logTags": {
+            "args": {
+                "tags": {
+                    "type": "vector<string>"
+                }
+            },
+            "result_type": "LogTags"
+        },
+        "data": {
+            "args": {
+                "bytes": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Data"
+        },
+        "liteServer.info": {
+            "args": {
+                "now": {
+                    "type": "int53"
+                },
+                "version": {
+                    "type": "int32"
+                },
+                "capabilities": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "liteServer.Info"
+        },
+        "blocks.masterchainInfo": {
+            "args": {
+                "last": {
+                    "type": "ton.BlockIdExt"
+                },
+                "state_root_hash": {
+                    "type": "bytes"
+                },
+                "init": {
+                    "type": "ton.BlockIdExt"
+                }
+            },
+            "result_type": "blocks.MasterchainInfo"
+        },
+        "blocks.shards": {
+            "args": {
+                "shards": {
+                    "type": "vector<ton.BlockIdExt>"
+                }
+            },
+            "result_type": "blocks.Shards"
+        },
+        "blocks.accountTransactionId": {
+            "args": {
+                "account": {
+                    "type": "bytes"
+                },
+                "lt": {
+                    "type": "int64"
+                }
+            },
+            "result_type": "blocks.AccountTransactionId"
+        },
+        "blocks.shortTxId": {
+            "args": {
+                "mode": {
+                    "type": "#"
+                },
+                "account": {
+                    "type": "mode.0?bytes"
+                },
+                "lt": {
+                    "type": "mode.1?int64"
+                },
+                "hash": {
+                    "type": "mode.2?bytes"
+                }
+            },
+            "result_type": "liteServer.TransactionId"
+        },
+        "blocks.transactions": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "req_count": {
+                    "type": "int32"
+                },
+                "incomplete": {
+                    "type": "Bool"
+                },
+                "transactions": {
+                    "type": "vector<blocks.shortTxId>"
+                }
+            },
+            "result_type": "blocks.Transactions"
+        },
+        "blocks.transactionsExt": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "req_count": {
+                    "type": "int32"
+                },
+                "incomplete": {
+                    "type": "Bool"
+                },
+                "transactions": {
+                    "type": "vector<raw.transaction>"
+                }
+            },
+            "result_type": "blocks.TransactionsExt"
+        },
+        "blocks.header": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "global_id": {
+                    "type": "int32"
+                },
+                "version": {
+                    "type": "int32"
+                },
+                "flags": {
+                    "type": "#"
+                },
+                "after_merge": {
+                    "type": "Bool"
+                },
+                "after_split": {
+                    "type": "Bool"
+                },
+                "before_split": {
+                    "type": "Bool"
+                },
+                "want_merge": {
+                    "type": "Bool"
+                },
+                "want_split": {
+                    "type": "Bool"
+                },
+                "validator_list_hash_short": {
+                    "type": "int32"
+                },
+                "catchain_seqno": {
+                    "type": "int32"
+                },
+                "min_ref_mc_seqno": {
+                    "type": "int32"
+                },
+                "is_key_block": {
+                    "type": "Bool"
+                },
+                "prev_key_block_seqno": {
+                    "type": "int32"
+                },
+                "start_lt": {
+                    "type": "int64"
+                },
+                "end_lt": {
+                    "type": "int64"
+                },
+                "gen_utime": {
+                    "type": "int53"
+                },
+                "vert_seqno": {
+                    "type": "#"
+                },
+                "prev_blocks": {
+                    "type": "vector<ton.blockIdExt>"
+                }
+            },
+            "result_type": "blocks.Header"
+        },
+        "blocks.signature": {
+            "args": {
+                "node_id_short": {
+                    "type": "int256"
+                },
+                "signature": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "blocks.Signature"
+        },
+        "blocks.blockSignatures": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "signatures": {
+                    "type": "(vector blocks.signature)"
+                }
+            },
+            "result_type": "blocks.BlockSignatures"
+        },
+        "blocks.shardBlockLink": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "proof": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "blocks.ShardBlockLink"
+        },
+        "blocks.blockLinkBack": {
+            "args": {
+                "to_key_block": {
+                    "type": "Bool"
+                },
+                "from": {
+                    "type": "ton.blockIdExt"
+                },
+                "to": {
+                    "type": "ton.blockIdExt"
+                },
+                "dest_proof": {
+                    "type": "bytes"
+                },
+                "proof": {
+                    "type": "bytes"
+                },
+                "state_proof": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "blocks.BlockLinkBack"
+        },
+        "blocks.shardBlockProof": {
+            "args": {
+                "from": {
+                    "type": "ton.blockIdExt"
+                },
+                "mc_id": {
+                    "type": "ton.blockIdExt"
+                },
+                "links": {
+                    "type": "(vector blocks.shardBlockLink)"
+                },
+                "mc_proof": {
+                    "type": "(vector blocks.blockLinkBack)"
+                }
+            },
+            "result_type": "blocks.ShardBlockProof"
+        },
+        "configInfo": {
+            "args": {
+                "config": {
+                    "type": "tvm.cell"
+                }
+            },
+            "result_type": "ConfigInfo"
+        }
+    },
+    "functions": {
+        "init": {
+            "args": {
+                "options": {
+                    "type": "options"
+                }
+            },
+            "result_type": "options.Info"
+        },
+        "close": {
+            "args": {},
+            "result_type": "Ok"
+        },
+        "options.setConfig": {
+            "args": {
+                "config": {
+                    "type": "config"
+                }
+            },
+            "result_type": "options.ConfigInfo"
+        },
+        "options.validateConfig": {
+            "args": {
+                "config": {
+                    "type": "config"
+                }
+            },
+            "result_type": "options.ConfigInfo"
+        },
+        "createNewKey": {
+            "args": {
+                "local_password": {
+                    "type": "secureBytes"
+                },
+                "mnemonic_password": {
+                    "type": "secureBytes"
+                },
+                "random_extra_seed": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Key"
+        },
+        "deleteKey": {
+            "args": {
+                "key": {
+                    "type": "key"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "deleteAllKeys": {
+            "args": {},
+            "result_type": "Ok"
+        },
+        "exportKey": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                }
+            },
+            "result_type": "ExportedKey"
+        },
+        "exportPemKey": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                },
+                "key_password": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "ExportedPemKey"
+        },
+        "exportEncryptedKey": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                },
+                "key_password": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "ExportedEncryptedKey"
+        },
+        "exportUnencryptedKey": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                }
+            },
+            "result_type": "ExportedUnencryptedKey"
+        },
+        "importKey": {
+            "args": {
+                "local_password": {
+                    "type": "secureBytes"
+                },
+                "mnemonic_password": {
+                    "type": "secureBytes"
+                },
+                "exported_key": {
+                    "type": "exportedKey"
+                }
+            },
+            "result_type": "Key"
+        },
+        "importPemKey": {
+            "args": {
+                "local_password": {
+                    "type": "secureBytes"
+                },
+                "key_password": {
+                    "type": "secureBytes"
+                },
+                "exported_key": {
+                    "type": "exportedPemKey"
+                }
+            },
+            "result_type": "Key"
+        },
+        "importEncryptedKey": {
+            "args": {
+                "local_password": {
+                    "type": "secureBytes"
+                },
+                "key_password": {
+                    "type": "secureBytes"
+                },
+                "exported_encrypted_key": {
+                    "type": "exportedEncryptedKey"
+                }
+            },
+            "result_type": "Key"
+        },
+        "importUnencryptedKey": {
+            "args": {
+                "local_password": {
+                    "type": "secureBytes"
+                },
+                "exported_unencrypted_key": {
+                    "type": "exportedUnencryptedKey"
+                }
+            },
+            "result_type": "Key"
+        },
+        "changeLocalPassword": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                },
+                "new_local_password": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Key"
+        },
+        "encrypt": {
+            "args": {
+                "decrypted_data": {
+                    "type": "secureBytes"
+                },
+                "secret": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Data"
+        },
+        "decrypt": {
+            "args": {
+                "encrypted_data": {
+                    "type": "secureBytes"
+                },
+                "secret": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "Data"
+        },
+        "kdf": {
+            "args": {
+                "password": {
+                    "type": "secureBytes"
+                },
+                "salt": {
+                    "type": "secureBytes"
+                },
+                "iterations": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "Data"
+        },
+        "unpackAccountAddress": {
+            "args": {
+                "account_address": {
+                    "type": "string"
+                }
+            },
+            "result_type": "UnpackedAccountAddress"
+        },
+        "packAccountAddress": {
+            "args": {
+                "account_address": {
+                    "type": "unpackedAccountAddress"
+                }
+            },
+            "result_type": "AccountAddress"
+        },
+        "getBip39Hints": {
+            "args": {
+                "prefix": {
+                    "type": "string"
+                }
+            },
+            "result_type": "Bip39Hints"
+        },
+        "raw.getAccountState": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                }
+            },
+            "result_type": "raw.FullAccountState"
+        },
+        "raw.getAccountStateByTransaction": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "raw.FullAccountState"
+        },
+        "raw.getTransactions": {
+            "args": {
+                "private_key": {
+                    "type": "InputKey"
+                },
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "from_transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "raw.Transactions"
+        },
+        "raw.getTransactionsV2": {
+            "args": {
+                "private_key": {
+                    "type": "InputKey"
+                },
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "from_transaction_id": {
+                    "type": "internal.transactionId"
+                },
+                "count": {
+                    "type": "#"
+                },
+                "try_decode_messages": {
+                    "type": "Bool"
+                }
+            },
+            "result_type": "raw.Transactions"
+        },
+        "raw.sendMessage": {
+            "args": {
+                "body": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "raw.sendMessageReturnHash": {
+            "args": {
+                "body": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "raw.ExtMessageInfo"
+        },
+        "raw.createAndSendMessage": {
+            "args": {
+                "destination": {
+                    "type": "accountAddress"
+                },
+                "initial_account_state": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "raw.createQuery": {
+            "args": {
+                "destination": {
+                    "type": "accountAddress"
+                },
+                "init_code": {
+                    "type": "bytes"
+                },
+                "init_data": {
+                    "type": "bytes"
+                },
+                "body": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "query.Info"
+        },
+        "sync": {
+            "args": {},
+            "result_type": "ton.BlockIdExt"
+        },
+        "getAccountAddress": {
+            "args": {
+                "initial_account_state": {
+                    "type": "InitialAccountState"
+                },
+                "revision": {
+                    "type": "int32"
+                },
+                "workchain_id": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "AccountAddress"
+        },
+        "guessAccountRevision": {
+            "args": {
+                "initial_account_state": {
+                    "type": "InitialAccountState"
+                },
+                "workchain_id": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "AccountRevisionList"
+        },
+        "guessAccount": {
+            "args": {
+                "public_key": {
+                    "type": "string"
+                },
+                "rwallet_init_public_key": {
+                    "type": "string"
+                }
+            },
+            "result_type": "AccountRevisionList"
+        },
+        "getAccountState": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                }
+            },
+            "result_type": "FullAccountState"
+        },
+        "getAccountStateByTransaction": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "FullAccountState"
+        },
+        "getShardAccountCell": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "getShardAccountCellByTransaction": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "createQuery": {
+            "args": {
+                "private_key": {
+                    "type": "InputKey"
+                },
+                "address": {
+                    "type": "accountAddress"
+                },
+                "timeout": {
+                    "type": "int32"
+                },
+                "action": {
+                    "type": "Action"
+                },
+                "initial_account_state": {
+                    "type": "InitialAccountState"
+                }
+            },
+            "result_type": "query.Info"
+        },
+        "getConfigParam": {
+            "args": {
+                "mode": {
+                    "type": "#"
+                },
+                "param": {
+                    "type": "#"
+                }
+            },
+            "result_type": "ConfigInfo"
+        },
+        "getConfigAll": {
+            "args": {
+                "mode": {
+                    "type": "#"
+                }
+            },
+            "result_type": "ConfigInfo"
+        },
+        "msg.decrypt": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                },
+                "data": {
+                    "type": "msg.dataEncryptedArray"
+                }
+            },
+            "result_type": "msg.DataDecryptedArray"
+        },
+        "msg.decryptWithProof": {
+            "args": {
+                "proof": {
+                    "type": "bytes"
+                },
+                "data": {
+                    "type": "msg.dataEncrypted"
+                }
+            },
+            "result_type": "msg.Data"
+        },
+        "query.send": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "query.forget": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "query.estimateFees": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                },
+                "ignore_chksig": {
+                    "type": "Bool"
+                }
+            },
+            "result_type": "query.Fees"
+        },
+        "query.getInfo": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "query.Info"
+        },
+        "smc.load": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                }
+            },
+            "result_type": "smc.Info"
+        },
+        "smc.loadByTransaction": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "transaction_id": {
+                    "type": "internal.transactionId"
+                }
+            },
+            "result_type": "smc.Info"
+        },
+        "smc.forget": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "smc.getCode": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "smc.getData": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "smc.getState": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                }
+            },
+            "result_type": "tvm.Cell"
+        },
+        "smc.runGetMethod": {
+            "args": {
+                "id": {
+                    "type": "int53"
+                },
+                "method": {
+                    "type": "smc.MethodId"
+                },
+                "stack": {
+                    "type": "vector<tvm.StackEntry>"
+                }
+            },
+            "result_type": "smc.RunResult"
+        },
+        "smc.getLibraries": {
+            "args": {
+                "library_list": {
+                    "type": "(vector int256)"
+                }
+            },
+            "result_type": "smc.LibraryResult"
+        },
+        "dns.resolve": {
+            "args": {
+                "account_address": {
+                    "type": "accountAddress"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "int256"
+                },
+                "ttl": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "dns.Resolved"
+        },
+        "pchan.signPromise": {
+            "args": {
+                "input_key": {
+                    "type": "InputKey"
+                },
+                "promise": {
+                    "type": "pchan.promise"
+                }
+            },
+            "result_type": "pchan.Promise"
+        },
+        "pchan.validatePromise": {
+            "args": {
+                "public_key": {
+                    "type": "bytes"
+                },
+                "promise": {
+                    "type": "pchan.promise"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "pchan.packPromise": {
+            "args": {
+                "promise": {
+                    "type": "pchan.promise"
+                }
+            },
+            "result_type": "Data"
+        },
+        "pchan.unpackPromise": {
+            "args": {
+                "data": {
+                    "type": "secureBytes"
+                }
+            },
+            "result_type": "pchan.Promise"
+        },
+        "blocks.getMasterchainInfo": {
+            "args": {},
+            "result_type": "blocks.MasterchainInfo"
+        },
+        "blocks.getShards": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                }
+            },
+            "result_type": "blocks.Shards"
+        },
+        "blocks.lookupBlock": {
+            "args": {
+                "mode": {
+                    "type": "int32"
+                },
+                "id": {
+                    "type": "ton.blockId"
+                },
+                "lt": {
+                    "type": "int64"
+                },
+                "utime": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "ton.BlockIdExt"
+        },
+        "blocks.getTransactions": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "mode": {
+                    "type": "#"
+                },
+                "count": {
+                    "type": "#"
+                },
+                "after": {
+                    "type": "blocks.accountTransactionId"
+                }
+            },
+            "result_type": "blocks.Transactions"
+        },
+        "blocks.getTransactionsExt": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "mode": {
+                    "type": "#"
+                },
+                "count": {
+                    "type": "#"
+                },
+                "after": {
+                    "type": "blocks.accountTransactionId"
+                }
+            },
+            "result_type": "blocks.TransactionsExt"
+        },
+        "blocks.getBlockHeader": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                }
+            },
+            "result_type": "blocks.Header"
+        },
+        "blocks.getMasterchainBlockSignatures": {
+            "args": {
+                "seqno": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "blocks.BlockSignatures"
+        },
+        "blocks.getShardBlockProof": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "mode": {
+                    "type": "#"
+                },
+                "from": {
+                    "type": "mode.0?ton.blockIdExt"
+                }
+            },
+            "result_type": "blocks.ShardBlockProof"
+        },
+        "onLiteServerQueryResult": {
+            "args": {
+                "id": {
+                    "type": "int64"
+                },
+                "bytes": {
+                    "type": "bytes"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "onLiteServerQueryError": {
+            "args": {
+                "id": {
+                    "type": "int64"
+                },
+                "error": {
+                    "type": "error"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "withBlock": {
+            "args": {
+                "id": {
+                    "type": "ton.blockIdExt"
+                },
+                "function": {
+                    "type": "Function"
+                }
+            },
+            "result_type": "Object"
+        },
+        "runTests": {
+            "args": {
+                "dir": {
+                    "type": "string"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "liteServer.getInfo": {
+            "args": {},
+            "result_type": "liteServer.Info"
+        },
+        "setLogStream": {
+            "args": {
+                "log_stream": {
+                    "type": "LogStream"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "getLogStream": {
+            "args": {},
+            "result_type": "LogStream"
+        },
+        "setLogVerbosityLevel": {
+            "args": {
+                "new_verbosity_level": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "getLogVerbosityLevel": {
+            "args": {},
+            "result_type": "LogVerbosityLevel"
+        },
+        "getLogTags": {
+            "args": {},
+            "result_type": "LogTags"
+        },
+        "setLogTagVerbosityLevel": {
+            "args": {
+                "tag": {
+                    "type": "string"
+                },
+                "new_verbosity_level": {
+                    "type": "int32"
+                }
+            },
+            "result_type": "Ok"
+        },
+        "getLogTagVerbosityLevel": {
+            "args": {
+                "tag": {
+                    "type": "string"
+                }
+            },
+            "result_type": "LogVerbosityLevel"
+        },
+        "addLogMessage": {
+            "args": {
+                "verbosity_level": {
+                    "type": "int32"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "result_type": "Ok"
+        }
+    }
+}

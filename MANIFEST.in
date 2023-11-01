@@ -1,0 +1,2 @@
+include README.md LICENSE tonx/tonlib_api.*
+recursive-include tonx *.py

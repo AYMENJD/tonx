@@ -1,0 +1,45 @@
+name: Generate TonX
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone TonX
+        uses: actions/checkout@v3
+
+      - name: Install Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Generate TonX files
+        run: |
+          cd $GITHUB_WORKSPACE/tonx
+          mv types/ _types_
+          python -m pip install black
+          mv _types_/ types
+          python generate_json.py
+          python generate_files.py
+
+      - name: Commit Tonlib files
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Update tonlib files"
+          add: '["tonx/tonlib_api.tl", "tonx/td_api.json",]'
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Commit generated TonX files
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Generate TonX files"
+          add: '["tonx/methods/tonlib_functions.py","tonx/types/tonlib_types.py", "tonx/td_api.json",]'
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
