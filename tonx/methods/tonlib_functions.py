@@ -884,6 +884,20 @@ class TonlibFunctions:
             wait_sync=wait_sync,
         )
 
+    async def smcGetLibrariesExt(
+        self,
+        list: List[types.SmcLibraryQueryExt] = None,
+        request_timeout: float = 10.0,
+        wait_sync: bool = False,
+    ) -> Union[types.Error, types.SmcLibraryResultExt]:
+        """Method for ``smc.getLibrariesExt``"""
+
+        return await self.invoke(
+            {"@type": "smc.getLibrariesExt", "list": list},
+            timeout=request_timeout,
+            wait_sync=wait_sync,
+        )
+
     async def dnsResolve(
         self,
         account_address: types.AccountAddress = None,

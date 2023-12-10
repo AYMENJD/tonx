@@ -399,6 +399,18 @@ class SmcLibraryResult:
     pass
 
 
+class SmcLibraryQueryExt:
+    """Class for ``smc.LibraryQueryExt``"""
+
+    pass
+
+
+class SmcLibraryResultExt:
+    """Class for ``smc.LibraryResultExt``"""
+
+    pass
+
+
 class Update:
     """Class for ``Update``"""
 
@@ -1882,6 +1894,51 @@ class WalletV3InitialAccountState(TlObject, InitialAccountState):
         )
 
 
+class WalletV4InitialAccountState(TlObject, InitialAccountState):
+    """Type for ``wallet.v4.initialAccountState``"""
+
+    def __init__(
+        self, public_key: str = "", wallet_id: int = 0, extra_id: str = None
+    ) -> None:
+        self.public_key: Union[str, None] = public_key
+        self.wallet_id: int = int(wallet_id)
+        self.extra_id: str = extra_id
+
+    def __str__(self):
+        return str(tonx.utils.obj_to_json(self, indent=4))
+
+    def getType(self) -> Literal["wallet.v4.initialAccountState"]:
+        return "wallet.v4.initialAccountState"
+
+    def getClass(self) -> Literal["InitialAccountState"]:
+        return "InitialAccountState"
+
+    def to_dict(self) -> dict:
+        data = {
+            "@type": self.getType(),
+            "public_key": self.public_key,
+            "wallet_id": self.wallet_id,
+            "@extra": self.extra_id,
+        }
+
+        if not self.extra_id:
+            del data["@extra"]
+
+        return data
+
+    @classmethod
+    def from_dict(cls, data: dict) -> Union["WalletV4InitialAccountState", None]:
+        return (
+            cls(
+                public_key=data.get("public_key", ""),
+                wallet_id=data.get("wallet_id", 0),
+                extra_id=data.get("@extra"),
+            )
+            if data
+            else None
+        )
+
+
 class WalletHighloadV1InitialAccountState(TlObject, InitialAccountState):
     """Type for ``wallet.highload.v1.initialAccountState``"""
 
@@ -2280,6 +2337,51 @@ class WalletV3AccountState(TlObject, AccountState):
 
     @classmethod
     def from_dict(cls, data: dict) -> Union["WalletV3AccountState", None]:
+        return (
+            cls(
+                wallet_id=data.get("wallet_id", 0),
+                seqno=data.get("seqno", 0),
+                extra_id=data.get("@extra"),
+            )
+            if data
+            else None
+        )
+
+
+class WalletV4AccountState(TlObject, AccountState):
+    """Type for ``wallet.v4.accountState``"""
+
+    def __init__(
+        self, wallet_id: int = 0, seqno: int = 0, extra_id: str = None
+    ) -> None:
+        self.wallet_id: int = int(wallet_id)
+        self.seqno: int = int(seqno)
+        self.extra_id: str = extra_id
+
+    def __str__(self):
+        return str(tonx.utils.obj_to_json(self, indent=4))
+
+    def getType(self) -> Literal["wallet.v4.accountState"]:
+        return "wallet.v4.accountState"
+
+    def getClass(self) -> Literal["AccountState"]:
+        return "AccountState"
+
+    def to_dict(self) -> dict:
+        data = {
+            "@type": self.getType(),
+            "wallet_id": self.wallet_id,
+            "seqno": self.seqno,
+            "@extra": self.extra_id,
+        }
+
+        if not self.extra_id:
+            del data["@extra"]
+
+        return data
+
+    @classmethod
+    def from_dict(cls, data: dict) -> Union["WalletV4AccountState", None]:
         return (
             cls(
                 wallet_id=data.get("wallet_id", 0),
@@ -2756,6 +2858,7 @@ class FullAccountState(TlObject, FullAccountState):
         self.account_state: Union[
             RawAccountState,
             WalletV3AccountState,
+            WalletV4AccountState,
             WalletHighloadV1AccountState,
             WalletHighloadV2AccountState,
             DnsAccountState,
@@ -4923,6 +5026,134 @@ class SmcLibraryResult(TlObject, SmcLibraryResult):
     def from_dict(cls, data: dict) -> Union["SmcLibraryResult", None]:
         return (
             cls(result=data.get("result", None), extra_id=data.get("@extra"))
+            if data
+            else None
+        )
+
+
+class SmcLibraryQueryExtOne(TlObject, SmcLibraryQueryExt):
+    """Type for ``smc.libraryQueryExt.one``"""
+
+    def __init__(self, hash: int = 0, extra_id: str = None) -> None:
+        self.hash: int = int(hash)
+        self.extra_id: str = extra_id
+
+    def __str__(self):
+        return str(tonx.utils.obj_to_json(self, indent=4))
+
+    def getType(self) -> Literal["smc.libraryQueryExt.one"]:
+        return "smc.libraryQueryExt.one"
+
+    def getClass(self) -> Literal["smc.LibraryQueryExt"]:
+        return "smc.LibraryQueryExt"
+
+    def to_dict(self) -> dict:
+        data = {"@type": self.getType(), "hash": self.hash, "@extra": self.extra_id}
+
+        if not self.extra_id:
+            del data["@extra"]
+
+        return data
+
+    @classmethod
+    def from_dict(cls, data: dict) -> Union["SmcLibraryQueryExtOne", None]:
+        return (
+            cls(hash=data.get("hash", 0), extra_id=data.get("@extra")) if data else None
+        )
+
+
+class SmcLibraryQueryExtScanBoc(TlObject, SmcLibraryQueryExt):
+    """Type for ``smc.libraryQueryExt.scanBoc``"""
+
+    def __init__(
+        self, boc: bytes = b"", max_libs: int = 0, extra_id: str = None
+    ) -> None:
+        self.boc: bytes = b64decode(boc)
+        self.max_libs: int = int(max_libs)
+        self.extra_id: str = extra_id
+
+    def __str__(self):
+        return str(tonx.utils.obj_to_json(self, indent=4))
+
+    def getType(self) -> Literal["smc.libraryQueryExt.scanBoc"]:
+        return "smc.libraryQueryExt.scanBoc"
+
+    def getClass(self) -> Literal["smc.LibraryQueryExt"]:
+        return "smc.LibraryQueryExt"
+
+    def to_dict(self) -> dict:
+        data = {
+            "@type": self.getType(),
+            "boc": self.boc,
+            "max_libs": self.max_libs,
+            "@extra": self.extra_id,
+        }
+
+        if not self.extra_id:
+            del data["@extra"]
+
+        return data
+
+    @classmethod
+    def from_dict(cls, data: dict) -> Union["SmcLibraryQueryExtScanBoc", None]:
+        return (
+            cls(
+                boc=data.get("boc", b""),
+                max_libs=data.get("max_libs", 0),
+                extra_id=data.get("@extra"),
+            )
+            if data
+            else None
+        )
+
+
+class SmcLibraryResultExt(TlObject, SmcLibraryResultExt):
+    """Type for ``smc.libraryResultExt``"""
+
+    def __init__(
+        self,
+        dict_boc: bytes = b"",
+        libs_ok: List[int] = None,
+        libs_not_found: List[int] = None,
+        extra_id: str = None,
+    ) -> None:
+        self.dict_boc: bytes = b64decode(dict_boc)
+        self.libs_ok: List[int] = libs_ok or []
+        self.libs_not_found: List[int] = libs_not_found or []
+        self.extra_id: str = extra_id
+
+    def __str__(self):
+        return str(tonx.utils.obj_to_json(self, indent=4))
+
+    def getType(self) -> Literal["smc.libraryResultExt"]:
+        return "smc.libraryResultExt"
+
+    def getClass(self) -> Literal["smc.LibraryResultExt"]:
+        return "smc.LibraryResultExt"
+
+    def to_dict(self) -> dict:
+        data = {
+            "@type": self.getType(),
+            "dict_boc": self.dict_boc,
+            "libs_ok": self.libs_ok,
+            "libs_not_found": self.libs_not_found,
+            "@extra": self.extra_id,
+        }
+
+        if not self.extra_id:
+            del data["@extra"]
+
+        return data
+
+    @classmethod
+    def from_dict(cls, data: dict) -> Union["SmcLibraryResultExt", None]:
+        return (
+            cls(
+                dict_boc=data.get("dict_boc", b""),
+                libs_ok=data.get("libs_ok", None),
+                libs_not_found=data.get("libs_not_found", None),
+                extra_id=data.get("@extra"),
+            )
             if data
             else None
         )
