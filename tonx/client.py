@@ -241,6 +241,7 @@ class Client(TonlibFunctions):
         account_address: types.AccountAddress,
         from_transaction_id: types.InternalTransactionId = None,
         to_transaction_id: types.InternalTransactionId = None,
+        request_limit: int = None,
         request_timeout: float = 10.0,
         wait_sync: bool = False,
     ) -> typing.Union[types.Error, types.RawTransactions]:
@@ -257,9 +258,19 @@ class Client(TonlibFunctions):
             to_transaction_id (:class:`~tonx.types.InternalTransactionId`, *optional*):
                 The ending transaction ID to fetch transactions up to. Default is ``None``
 
+            request_limit (:py:class:`int` || :py:class:`None`, *optional*):
+                Limits the number of requests made to the lite server during the retrieval process.
+                If set to ``None``, there is no limit on the number of requests (infinite).
+                Default is ``None``
+
         Returns:
             :class:`~tonx.types.RawTransactions`
         """
+
+        if request_limit is not None and not isinstance(request_limit, int):
+            raise ValueError("request_limit must be an integer or None")
+        elif isinstance(request_limit, int) and request_limit < 1:
+            raise ValueError("request_limit must be >= 1")
 
         if not from_transaction_id:
             accountState = await self.rawGetAccountState(
@@ -269,9 +280,6 @@ class Client(TonlibFunctions):
                 from_transaction_id = accountState.last_transaction_id
             else:
                 return accountState
-                # raise TonXError(
-                #     f"raw.getAccountState responded with {accountState.code}: {accountState.message}"
-                # )
 
         if not to_transaction_id:
             to_transaction_id = types.InternalTransactionId()
@@ -279,12 +287,15 @@ class Client(TonlibFunctions):
         current_from_transaction_id = from_transaction_id
         transactions_list = types.RawTransactions()
         transactions_count = 0
+        request_count = 0
         to_transaction_reached = False
 
         if from_transaction_id.lt == to_transaction_id.lt:
             return transactions_list
 
-        while not to_transaction_reached:
+        while (
+            request_limit is None or request_count < request_limit
+        ) and not to_transaction_reached:
             try:
                 raw_transactions = await self.rawGetTransactions(
                     None,
@@ -305,10 +316,9 @@ class Client(TonlibFunctions):
                         return transactions_list
                     else:
                         return raw_transactions
-                        # raise TonXError(
-                        #     f"raw.getTransactions responded with {raw_transactions.code}: {raw_transactions.message}"
-                        # )
                 else:
+                    request_count += 1
+
                     if to_transaction_id.lt == 0:
                         return raw_transactions
 
