@@ -608,8 +608,10 @@ class Payments:
                     account_address=self.__account_address,
                     from_transaction_id=None,
                     to_transaction_id=self.__last_transaction,
+                    request_limit=5,
                     wait_sync=True,
                 )
+
                 if rawTransactions.getType() == "error":
                     if (
                         "block is not applied" in rawTransactions.message
