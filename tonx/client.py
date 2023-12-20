@@ -273,13 +273,21 @@ class Client(TonlibFunctions):
             raise ValueError("request_limit must be >= 1")
 
         if not from_transaction_id:
-            accountState = await self.rawGetAccountState(
-                account_address, request_timeout=request_timeout, wait_sync=wait_sync
-            )
-            if accountState.getType() == "raw.fullAccountState":
-                from_transaction_id = accountState.last_transaction_id
-            else:
-                return accountState
+            while True:
+                try:
+                    accountState = await self.rawGetAccountState(
+                        account_address,
+                        request_timeout=request_timeout,
+                        wait_sync=wait_sync,
+                    )
+                except asyncio.TimeoutError:
+                    continue
+                else:
+                    if accountState.getType() == "raw.fullAccountState":
+                        from_transaction_id = accountState.last_transaction_id
+                        break
+                    else:
+                        return accountState
 
         if not to_transaction_id:
             to_transaction_id = types.InternalTransactionId()
