@@ -285,45 +285,50 @@ class Client(TonlibFunctions):
             return transactions_list
 
         while not to_transaction_reached:
-            raw_transactions = await self.rawGetTransactions(
-                None,
-                account_address=account_address,
-                from_transaction_id=current_from_transaction_id,
-                request_timeout=request_timeout,
-                wait_sync=wait_sync,
-            )
-            if raw_transactions.getType() == "error":
-                if transactions_list.transactions:
-                    logger.error(
-                        f"raw.getTransactions returned an error after processing {transactions_count} transactions. Returning {transactions_count} transaction"
-                    )
-                    return transactions_list
-                else:
-                    return raw_transactions
-                    # raise TonXError(
-                    #     f"raw.getTransactions responded with {raw_transactions.code}: {raw_transactions.message}"
-                    # )
+            try:
+                raw_transactions = await self.rawGetTransactions(
+                    None,
+                    account_address=account_address,
+                    from_transaction_id=current_from_transaction_id,
+                    request_timeout=request_timeout,
+                    wait_sync=wait_sync,
+                )
+            except asyncio.TimeoutError:
+                logger.error("Timeout on rawGetTransactions request")
+                await asyncio.sleep(1)
             else:
-                if to_transaction_id.lt == 0:
-                    return raw_transactions
-
-                for transaction in raw_transactions.transactions:
-                    if transaction.transaction_id.lt <= to_transaction_id.lt:
-                        to_transaction_reached = True
-                        break
-                    else:
-                        transactions_list.transactions.append(transaction)
-                        transactions_count += 1
-
-                if raw_transactions.previous_transaction_id:
-                    if raw_transactions.previous_transaction_id.lt == 0:
-                        break
-                    else:
-                        current_from_transaction_id = (
-                            raw_transactions.previous_transaction_id
+                if raw_transactions.getType() == "error":
+                    if transactions_list.transactions:
+                        logger.error(
+                            f"raw.getTransactions returned an error after processing {transactions_count} transactions. Returning {transactions_count} transaction"
                         )
+                        return transactions_list
+                    else:
+                        return raw_transactions
+                        # raise TonXError(
+                        #     f"raw.getTransactions responded with {raw_transactions.code}: {raw_transactions.message}"
+                        # )
                 else:
-                    break  # Just in case
+                    if to_transaction_id.lt == 0:
+                        return raw_transactions
+
+                    for transaction in raw_transactions.transactions:
+                        if transaction.transaction_id.lt <= to_transaction_id.lt:
+                            to_transaction_reached = True
+                            break
+                        else:
+                            transactions_list.transactions.append(transaction)
+                            transactions_count += 1
+
+                    if raw_transactions.previous_transaction_id:
+                        if raw_transactions.previous_transaction_id.lt == 0:
+                            break
+                        else:
+                            current_from_transaction_id = (
+                                raw_transactions.previous_transaction_id
+                            )
+                    else:
+                        break  # Just in case
 
         return transactions_list
 
