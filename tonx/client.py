@@ -523,7 +523,10 @@ class Client(TonlibFunctions):
 
         if data.extra_id and data.extra_id in self.__results:
             result = self.__results.pop(data.extra_id)
-            result.set_result(data)
+
+            if not result.done():  # To avoid ``asyncio.InvalidStateError``
+                result.set_result(data)
+
         else:
             self.loop.create_task(self.run_handlers(data))
 
