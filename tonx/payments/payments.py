@@ -338,7 +338,7 @@ class Payments:
 
         while retry_count < 5:
             accountState = await self.client.getAccountState(
-                self.__account_address, wait_sync=True
+                self.__account_address, wait_sync=False
             )
             if accountState.getType() == "error":
                 if (
@@ -609,7 +609,7 @@ class Payments:
                     from_transaction_id=None,
                     to_transaction_id=self.__last_transaction,
                     request_limit=5,
-                    wait_sync=True,
+                    wait_sync=False,
                 )
 
                 if rawTransactions.getType() == "error":
