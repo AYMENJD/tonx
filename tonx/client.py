@@ -423,7 +423,7 @@ class Client(TonlibFunctions):
             if result.getType() == "error" and any(
                 keyword in result.message for keyword in RETRYABLE_ERROR_KEYWORDS
             ):
-                logger.error(
+                logger.debug(
                     f"Retry {tries + 1}/{retries}: Got - {result.code}, {result.message}"
                 )
                 await asyncio.sleep(1)
