@@ -334,29 +334,14 @@ class Payments:
         if self.is_running:
             return
 
-        retry_count = 0
+        accountState = await self.client.getAccountState(
+            self.__account_address, wait_sync=False
+        )
 
-        while retry_count < 5:
-            accountState = await self.client.getAccountState(
-                self.__account_address, wait_sync=False
+        if accountState.getType() == "error":
+            raise tonx.TonXError(
+                f"Invalid account address {self.__account_address.account_address}: {accountState.code} - {accountState.message}"
             )
-            if accountState.getType() == "error":
-                if (
-                    "block is not applied" in accountState.message
-                    or "block is not ready" in accountState.message
-                ):
-                    logger.debug(
-                        f"Last transaction block for {self.__account_address.account_address} is not yet applied. Retrying..."
-                    )
-                    retry_count += 1
-                    await asyncio.sleep(1)
-                    continue
-                else:
-                    raise tonx.TonXError(
-                        f"Invalid account address {self.__account_address.account_address}: {accountState.code} - {accountState.message}"
-                    )
-            else:
-                break
 
         self.__account_address = accountState.address
 
@@ -613,17 +598,9 @@ class Payments:
                 )
 
                 if rawTransactions.getType() == "error":
-                    if (
-                        "block is not applied" in rawTransactions.message
-                        or "block is not ready" in rawTransactions.message
-                    ):
-                        logger.debug(
-                            f"Block with transaction ID {self.__last_transaction.lt} is not yet applied: {rawTransactions.code} - {rawTransactions.message}"
-                        )
-                    else:
-                        logger.error(
-                            f"Error processing transactions with transaction ID {self.__last_transaction.lt}: {rawTransactions.code} - {rawTransactions.message}"
-                        )
+                    logger.error(
+                        f"Error processing transactions with transaction ID {self.__last_transaction.lt}: {rawTransactions.code} - {rawTransactions.message}"
+                    )
                     await asyncio.sleep(2)
                 else:
                     if rawTransactions.transactions:

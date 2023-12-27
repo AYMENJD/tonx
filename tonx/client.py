@@ -18,6 +18,12 @@ from .tonapi import TonApi
 
 logger = logging.getLogger(__name__)
 
+RETRYABLE_ERROR_KEYWORDS = [
+    "LITE_SERVER_NETWORK",
+    "block is not applied",
+    "block is not ready",
+]
+
 
 class Client(TonlibFunctions):
     """Main client for TonX
@@ -414,8 +420,8 @@ class Client(TonlibFunctions):
 
             result = await asyncio.wait_for(future, timeout=timeout)
 
-            if result.getType() == "error" and (
-                result.message.startswith("LITE_SERVER_NETWORK")
+            if result.getType() == "error" and any(
+                keyword in result.message for keyword in RETRYABLE_ERROR_KEYWORDS
             ):
                 logger.error(
                     f"Retry {tries + 1}/{retries}: Got - {result.code}, {result.message}"
