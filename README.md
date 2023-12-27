@@ -135,7 +135,7 @@ async def main():
             "name": "AYMEN",
             "user_id": 1088394097,
         },  # Extra data that will be stored with the invoice
-        ttl=None,  # Invoice is valid for every with no expire time (NOTE: the default value for ttl is 3600 seconds a.k.a 1 hour)
+        ttl=None,  # Invoice is valid forever with no expire time (NOTE: the default value for ttl is 3600 seconds a.k.a 1 hour)
     )
 
     invoice_2 = await payments.createInvoice(
